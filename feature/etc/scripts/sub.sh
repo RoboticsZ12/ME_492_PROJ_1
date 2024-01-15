@@ -22,8 +22,5 @@ function argument_topic()
   echo "Enter the file_name: "
   read file_name
   echo "The name is: $file_name \n"
-
-# SETTING PUBLISHING RATE
-  
 }
 echo "hello"
