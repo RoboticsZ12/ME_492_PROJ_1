@@ -9,3 +9,4 @@ function topic()
   read topic_name
   echo "The topic name is: $topic_name \n"
 }
+echo "hello"
