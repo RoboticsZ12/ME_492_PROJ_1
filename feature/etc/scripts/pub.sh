@@ -25,7 +25,7 @@ if[ "$opt" == -z && "$topic_name" == -z && "$msg_type" == -z &&  "$msg" == -z ];
   echo "The number of arguments inputted is: $#"
   echo "The parameters have no inputs."
   
-else[ "$opt" != -z || "$topic_name" != -z || "$msg_type" != -z ||  "$msg" != -z ]; then
+elif[ "$opt" != -z || "$topic_name" != -z || "$msg_type" != -z ||  "$msg" != -z ]; then
   echo "Parameter: \n"
   echo "opt: $opt \n"
   echo "topic_name: $topic_name \n"
