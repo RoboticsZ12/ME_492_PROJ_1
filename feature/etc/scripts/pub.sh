@@ -12,5 +12,5 @@ msg_type ="$3"
 # msg is value of msg, parameter 4
 msg ="$4"
 }
-
+echo "jack"
 export -f paramter
