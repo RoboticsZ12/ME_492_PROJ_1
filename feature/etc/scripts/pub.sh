@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 # Bash script using echo
 
