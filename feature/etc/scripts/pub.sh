@@ -1,4 +1,5 @@
-# BASH SCRIPT: FUNCTION PARAMETER
+# BASH SCRIPT: pub.sh
+#FUNCTION PARAMETER
 
 function parameter()
 {
