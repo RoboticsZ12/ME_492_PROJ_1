@@ -20,6 +20,7 @@ msg ="$4"
 
 # -z means that the string returns a zero string
 # if you want to output the amount of parameters intputted, use {$#}
+# {$} in the below if else is used to reference the previous parameters described.
 if[ "$opt" == -z && "$topic_name" == -z && "$msg_type" == -z &&  "$msg" == -z ]; then
   echo "The number of arguments inputted is: $#"
   echo "The parameters have no inputs."
