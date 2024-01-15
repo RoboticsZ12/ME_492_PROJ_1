@@ -18,7 +18,7 @@ function argument_topic()
   read topic_name
   echo "The name is: $topic_name \n"
 
-# ASSIGNING file_name argument
+# ASSIGNING file_name
   echo "Enter the file_name.cvs: "
   read file_name
   echo "The name is: $file_name \n"
@@ -26,14 +26,17 @@ function argument_topic()
   if[$file_name != $file_name.cvs]; then 
     echo "Please enter a file name that ends in .cvs"
   exit 1
-
-  else
   fi
+}
 
+function topic_cvs($topic_name)
+{
+# SETTING PUBLISHING RATE TO THE TERMINAL
   echo "At what rate would you like to publish the data? "
   read pub_rate
   echo "Pub rate has been set to: $pub_rate \n"
 
-  sleep $pub_rate
+# RETRIEVING TOPIC NAMES
+echo "$topic_name"
 }
 echo "hello"
