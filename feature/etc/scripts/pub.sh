@@ -50,6 +50,6 @@ fi
   sleep 1
 }
 echo "jack"
-
+parameter
 # This line is used to make this function accessible to outside functions.
 export -f paramter
