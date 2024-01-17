@@ -9,7 +9,7 @@
 
 
 # CALLING <pub.sh> to assing arguments.
-  source pub.sh
+  source ./pub.sh
 
 
 function argument_topic()
@@ -20,7 +20,7 @@ function argument_topic()
   echo "The name is: $topic_name \n"
 
 # ASSIGNING file_name
-  echo "Enter the file_name.cvs: "
+  echo "Enter the file_name as a .cvs: "
   read file_name
   echo "The name is: $file_name \n"
 
