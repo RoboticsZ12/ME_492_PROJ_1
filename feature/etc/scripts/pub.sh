@@ -21,7 +21,7 @@ if[ "$opt" == -z && "$topic_name" == -z && "$msg_type" == -z &&  "$msg" == -z ];
   echo "The number of arguments inputted is: $#"
   echo "The parameters have no inputs."
   
-elif[ "$opt" != -z || "$topic_name" != -z || "$msg_type" != -z ||  "$msg" != -z ]; then
+elif[ "$opt" -ne -z || "$topic_name" -ne -z || "$msg_type" -ne -z ||  "$msg" -ne -z ]; then
   echo "Parameter: \n"
   echo "opt: $opt \n"
   echo "topic_name: $topic_name \n"
@@ -36,9 +36,9 @@ fi
   sleep 1
 
 # THIS LOOP WILL RUN AND PUBLISH ALL ARGUMENTS WHILE, -Z, THERE IS NO STRING DETECTED
-  while [$stop_input == -z]; do 
+  while [$stop_input -eq -z]; do 
     echo "pub: $opt $topic_name $msg_type $msg \n"
-  if[$stop_input != -z]; then 
+  if[$stop_input -ne -z]; then 
     echo "Hope you enjoyed the loop."
     break
   fi
