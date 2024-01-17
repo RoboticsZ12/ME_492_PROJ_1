@@ -24,7 +24,7 @@ function argument_topic()
   read file_name
   echo "The name is: $file_name \n"
 
-  if[ $file_name != $file_name.cvs ]; then 
+  if[ $file_name -ne $file_name.cvs ]; then 
     echo "Please enter a file name that ends in .cvs"
     exit 1
   fi
