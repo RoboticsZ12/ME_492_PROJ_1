@@ -17,11 +17,11 @@ msg ="$4"
 # -z means that the string returns a zero string
 # if you want to output the amount of parameters intputted, use {$#}
 # {$} in the below if else is used to reference the previous parameters described.
-if[ "$opt" == -z && "$topic_name" == -z && "$msg_type" == -z &&  "$msg" == -z ]; then
+if[ -z "$opt" && -z "$topic_name" && -z "$msg_type" &&  -z "$msg" ]; then
   echo "The number of arguments inputted is: $#"
   echo "The parameters have no inputs."
   
-elif[ "$opt" -ne -z || "$topic_name" -ne -z || "$msg_type" -ne -z ||  "$msg" -ne -z ]; then
+elif[ -n "$opt" || -n "$topic_name" || -n "$msg_type" ||  -n "$msg" ]; then
   echo "Parameter: \n"
   echo "opt: $opt \n"
   echo "topic_name: $topic_name \n"
@@ -36,9 +36,9 @@ fi
   sleep 1
 
 # THIS LOOP WILL RUN AND PUBLISH ALL ARGUMENTS WHILE, -Z, THERE IS NO STRING DETECTED
-  while [$stop_input -eq -z]; do 
+  while [ -z $stop_input ]; do 
     echo "pub: $opt $topic_name $msg_type $msg \n"
-  if[$stop_input -ne -z]; then 
+  if[ -n $stop_input ]; then 
     echo "Hope you enjoyed the loop."
     break
   fi
