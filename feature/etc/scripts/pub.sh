@@ -1,21 +1,17 @@
 # BASH SCRIPT: pub.sh
 #FUNCTION PARAMETER
 
-#---------------------------------------------
-# THIS FUNCTION WILL OUTPUT WHICH PARAMETER 
-# THE USER INPUTS. 
-# THIS FUNCTION WILL CHECK WHICH PARAMETER THE 
-# THE USER WISHES TO OUTPUT. 
-#----------------------------------------------
+#-------------------------------------------
+# THIS FUNCTION WILL OUTPUT THE PARAMETERS 
+# THAT HAVE BEEN INPUTTED BY THE USER IN 
+# ANOTHER FILE. 
+#-------------------------------------------
 function parameter()
 {
-# opt = option, parameter one
+# DECLARATION OF THE FOUR PARAMTERS. 
 opt ="$1"
-# topic_name = name of topic for publisher, parameter 2
 topic_name ="$2"
-# mas_type = published msg type, parameter 3
 msg_type ="$3"
-# msg is value of msg, parameter 4
 msg ="$4"
 
 # -z means that the string returns a zero string
@@ -50,6 +46,5 @@ fi
   sleep 1
 }
 echo "jack"
-parameter
 # This line is used to make this function accessible to outside functions.
 export -f paramter
