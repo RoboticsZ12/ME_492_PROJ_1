@@ -31,10 +31,23 @@ elif[ "$opt" != -z || "$topic_name" != -z || "$msg_type" != -z ||  "$msg" != -z 
   echo "topic_name: $topic_name \n"
   echo "msg_type: $msg_type \n"
   echo "msg: $msg \n"
-
 exit 1
 # fi indicates the end of the if/else 
 fi
+
+  echo "Publishing now. Press any key to stop. \n"
+  read stop_input
+  sleep 1
+
+# THIS LOOP WILL RUN AND PUBLISH ALL ARGUMENTS WHILE, -Z, THERE IS NO STRING DETECTED
+  while [$stop_input == -z]; do 
+    echo "pub: $opt $topic_name $msg_type $msg \n"
+  if[$stop_input != -z]; then 
+    echo "Hope you enjoyed the loop."
+    break
+  fi
+# PRINT OUT ECHO ABOVE EVERY 1 SECOND. 
+  sleep 1
 }
 echo "jack"
 
