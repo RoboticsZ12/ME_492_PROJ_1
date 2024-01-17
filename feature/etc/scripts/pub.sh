@@ -44,7 +44,7 @@ fi
   fi
 # PRINT OUT ECHO ABOVE EVERY 1 SECOND. 
   sleep 1
+
+echo $topic_name
+ros2 topic pub $opt $topic_name $msg_type $msg  
 }
-echo "jack"
-# This line is used to make this function accessible to outside functions.
-export -f paramter
