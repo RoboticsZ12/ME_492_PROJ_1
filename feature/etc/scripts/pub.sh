@@ -30,7 +30,7 @@ msg ="$4"
   #echo "msg: $msg \n"
 exit 1
 # fi indicates the end of the if/else 
-fi
+#fi
 
   #echo "Publishing now. Press any key to stop. \n"
   #read stop_input
