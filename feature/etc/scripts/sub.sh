@@ -1,4 +1,5 @@
-# BASH FILE: sub.sh
+#!/bin/bash
+#BASH FILE: sub.sh
 #ECHO TO THE TERMINAL
 
 #--------------------------------------------------
@@ -17,17 +18,16 @@ function argument_topic()
 # ASSIGNING topic_name argument
   echo "Enter the topic_name: "
   read topic_name
-  echo "The name is: $topic_name \n"
+  echo "The name is: $topic_name "
+
+sleep 1
 
 # ASSIGNING file_name
-  echo "Enter the file_name as a .cvs: "
+  echo "Enter the file_name: "
   read file_name
-  echo "The name is: $file_name \n"
+  echo "The file name is: $file_name"
 
-  if[ $file_name -ne $file_name.cvs ]; then 
-    echo "Please enter a file name that ends in .cvs"
-    exit 1
-  fi
+ sleep 1
 
 # SETTING PUBLISHING RATE TO THE TERMINAL
   echo "At what rate would you like to publish the data? "
@@ -35,6 +35,6 @@ function argument_topic()
   echo "Pub rate has been set to: $pub_rate \n"
 
 # CALLING FUNCTION "parameter" FROM FILE pub.sH
-  publish
+# >> creates a new if nothing exists. 
+ros2 topic echo $topic_name > $file_name.csv
 }
-echo "hello"

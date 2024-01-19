@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 #BASH SCRIPT: pub.sh
 #FUNCTION PARAMETER
 
@@ -7,13 +7,13 @@
 # THAT HAVE BEEN INPUTTED BY THE USER IN 
 # ANOTHER FILE. 
 #-------------------------------------------
-function parameter()
+function parameter ()
 {
 # DECLARATION OF THE FOUR PARAMTERS. 
-opt ="$1"
-topic_name ="$2"
-msg_type ="$3"
-msg ="$4"
+opt="$1"
+topic_name="$2"
+msg_type="$3"
+msg="$4"
 
 # -z means that the string returns a zero string
 # if you want to output the amount of parameters intputted, use {$#}
@@ -28,7 +28,7 @@ msg ="$4"
   #echo "topic_name: $topic_name \n"
   #echo "msg_type: $msg_type \n"
   #echo "msg: $msg \n"
-exit 1
+#exit 1
 # fi indicates the end of the if/else 
 #fi
 
@@ -47,7 +47,5 @@ exit 1
   sleep 1
 
 echo $topic_name
-ros2 topic pub $opt $topic_name $msg_type $msg  
+ros2 topic pub $opt $topic_name $msg_type "$msg"  
 }
-
-parameter()
