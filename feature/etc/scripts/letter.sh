@@ -30,8 +30,8 @@ parameter --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 0.0, y: 
 parameter --once /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: -1.5, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.0}}"
 
 
-#teleport
 
+#teleport
 #ros2 service call /turtle1/set_pen turtlesim/srv/SetPen "{'off': 1}"
 #ros2 service call /turtle1/teleport_absolute turtlesim/srv/TeleportAbsolute "{x: -10,y: 0,theta: 0}"
 
