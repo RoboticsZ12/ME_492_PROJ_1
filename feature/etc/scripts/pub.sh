@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #BASH SCRIPT: pub.sh
 #FUNCTION PARAMETER
 
@@ -10,6 +11,7 @@
 function parameter ()
 {
 # DECLARATION OF THE FOUR PARAMTERS. 
+# NO SPACES
 opt="$1"
 topic_name="$2"
 msg_type="$3"
